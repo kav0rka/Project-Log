@@ -1,0 +1,31 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane fx:controller="controllers.MainController" xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <MenuBar fx:id="mMenuBar">
+            <Menu text="File" fx:id="mFileMenu">
+                <MenuItem text="Add project" fx:id="addUserMenu" onAction="#addProject"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <ScrollPane>
+            <padding><Insets top="5" right="5" bottom="5" left="5"/></padding>
+            <VBox fx:id="mVBoxMain" alignment="TOP_LEFT" spacing="5">
+                <HBox fx:id="mHBoxRefresh">
+                    <Button fx:id="mRefreshButton"
+                            text="Refresh"
+                            alignment="TOP_LEFT"
+                            onAction="#setup">
+                    </Button>
+                </HBox>
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>
+
+
+

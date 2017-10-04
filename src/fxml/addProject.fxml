@@ -1,0 +1,29 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane fx:controller="controllers.AddProjectController"
+            xmlns:fx="http://javafx.com/fxml">
+    <center>
+        <GridPane hgap="5" vgap="5" fx:id="mGridPane">
+            <Text text="Project Number: " GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <ComboBox fx:id="mProjectBox" GridPane.rowIndex="1" GridPane.columnIndex="2" onAction="#setProjectName"/>
+
+            <Text text="Asigned to: " GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <ComboBox fx:id="mEmployees" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+
+            <Text text="Project Name: " GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            <Text fx:id="mProjectName" GridPane.rowIndex="3" GridPane.columnIndex="2"/>
+        </GridPane>
+    </center>
+    <bottom>
+        <HBox spacing="10">
+            <BorderPane.margin>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </BorderPane.margin>
+            <Button text="Cancel" fx:id="mCancelButton" onAction="#cancel"/>
+            <Button text="Save" fx:id="mSaveButton" onAction="#saveProject" BorderPane.alignment="CENTER_RIGHT"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
